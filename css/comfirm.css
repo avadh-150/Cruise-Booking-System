@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #1A73E8;
+    --success-color: #34A853;
+    --background-color: #F8F9FA;
+    --text-color: #202124;
+    --accent-color: #EA4335;
+    --spacing: 24px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.confirmation-container {
+    max-width: 1000px;
+    margin: var(--spacing) auto;
+    padding: 0 var(--spacing);
+}
+
+.confirmation-header {
+    margin-bottom: var(--spacing);
+}
+
+.confirmation-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.main-card {
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin-bottom: var(--spacing);
+}
+
+.confirmation-status {
+    text-align: center;
+    margin-bottom: var(--spacing);
+}
+
+.status-icon {
+    font-size: 48px;
+    color: var(--success-color);
+    margin-bottom: 12px;
+}
+
+.status-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+    color: var(--success-color);
+    margin: 0;
+}
+
+.reference-number {
+    background-color: var(--background-color);
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: var(--spacing);
+}
+
+.reference-number strong {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-left: 8px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing);
+    margin-bottom: var(--spacing);
+}
+
+.detail-item {
+    background-color: var(--background-color);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.detail-item label {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.detail-item span {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.price {
+    color: var(--primary-color) !important;
+    font-size: 1.2rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.btn i {
+    margin-right: 8px;
+}
+
+/* Print styles */
+@media print {
+    .nav, .footer, .action-buttons {
+        display: none !important;
+    }
+
+    .main-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+
+    body {
+        background: white;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .confirmation-container {
+        padding: 0 12px;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

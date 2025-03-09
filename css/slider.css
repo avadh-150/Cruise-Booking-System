@@ -1,0 +1,98 @@
+/* Captain Slider Section */
+.captain-slider-section {
+    padding: 60px 0;
+    background: #f8f9fa; /* Optional:  A light background */
+}
+
+.captain-slider-wrapper {
+    overflow: hidden; /* Important:  Hides the overflowing content */
+}
+
+.captain-slider {
+    display: flex; /* Arrange cards in a row */
+    animation: slideShow 20s linear infinite; /* Adjust duration as needed */
+    padding-bottom: 20px;
+}
+
+.captain-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 300px; /* Adjust card width as needed */
+    flex: 0 0 auto; /*  Prevent cards from shrinking */
+    transition: transform 0.3s ease;
+}
+
+.captain-card:hover {
+    transform: translateY(-5px);
+}
+
+.captain-image {
+    height: 200px; /* Adjust image height as needed */
+    overflow: hidden;
+}
+
+.captain-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.captain-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.captain-info h4 {
+    margin: 0;
+    color: #333;
+    font-size: 1.25rem;
+}
+
+.captain-role {
+    color: #666;
+    margin: 5px 0 15px;
+}
+
+.captain-details {
+    text-align: left;
+}
+
+.captain-details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.captain-details i {
+    margin-right: 8px;
+    color: #007bff;
+}
+
+/* Keyframes for the sliding animation */
+@keyframes slideShow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /*  Calculate the total width of all cards and the container width */
+        /*  This ensures a seamless loop */
+        transform: translateX(calc(-300px * var(--card-count))); /* Adjust based on card width */
+    }
+}
+
+/*  Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .captain-card {
+        width: 250px;
+    }
+
+    @keyframes slideShow {
+        100% {
+            transform: translateX(calc(-250px * var(--card-count)));
+        }
+    }
+}
+
+/*  Add more breakpoints as needed */
