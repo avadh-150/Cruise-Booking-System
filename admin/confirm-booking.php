@@ -36,13 +36,13 @@ use PHPMailer\PHPMailer\Exception;
                $mail->isSMTP();
                $mail->Host       = 'smtp.gmail.com'; // SMTP server
                $mail->SMTPAuth   = true;
-               $mail->Username   = '@gmail.com'; // Your Gmail address
-               $mail->Password   = '';                               //SMTP password
+               $mail->Username   = 'saximendapra@gmail.com'; // Your Gmail address
+               $mail->Password   = 'mtqd xttn xswu bwpq';                               //SMTP password
                $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // Enable TLS encryption
                $mail->Port       = 465; // TCP port
 
                // Recipients
-               $mail->setFrom('@gmail.com', 'form cruisebooks.org');
+               $mail->setFrom('saximendapra@gmail.com', 'form cruisebooks.org');
                $mail->addAddress($email);
 
                // Content

@@ -9,6 +9,25 @@
         body {
             font-family: 'Poppins', sans-serif;
         }
+
+        .nav-link {
+            position: relative;
+            text-decoration: none; /* Remove default underline */
+            display: inline-block; /*  Important:  Allows width to be based on content */
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px; /* Adjust position of the underline */
+            width: 60%;          /*  Adjust to fit text */
+            height: 2px; /* Adjust thickness of the underline */
+            background-color: blue; /* Adjust color of the underline */
+            transform-origin: left; /* Ensure scaling is from left */
+            transform: scaleX(1);   /* Initial scale to show the underline */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
     </style>
 </head>
 
@@ -37,19 +56,19 @@
                     <div class="mx-auto">
                         <nav class="site-navigation position-relative text-right" role="navigation">
                             <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
-                                <li class="active">
-                                    <a href="index.php" class="nav-link text-left">Home</a>
+                                <li class="nav-item">
+                                    <a href="index.php" class="nav-link text-left" data-page="home">Home</a>
                                 </li>
-                                <li><a href="about.php" class="nav-link text-left">About Us</a></li>
+                                <li class="nav-item"><a href="about.php" class="nav-link text-left" data-page="about">About Us</a></li>
 
-                                <li>
-                                    <a href="status.php" class="nav-link text-left">Book Status</a>
+                                <li class="nav-item">
+                                    <a href="status.php" class="nav-link text-left" data-page="status">Book Status</a>
                                 </li>
-                                <li><a href="services.php" class="nav-link text-left">Cruise</a></li>
+                                <li class="nav-item"><a href="services.php" class="nav-link text-left" data-page="services">Cruise</a></li>
 
-                                <li><a href="contact.php" class="nav-link text-left">Contact</a></li>
-                                <li><a href="gallery.php" class="nav-link text-left">Gallery</a></li>
-                                <li><a href="blogs.php" class="nav-link text-left">Blogs</a></li>
+                                <li class="nav-item"><a href="contact.php" class="nav-link text-left" data-page="contact">Contact</a></li>
+                                <li class="nav-item"><a href="gallery.php" class="nav-link text-left" data-page="gallery">Gallery</a></li>
+                                <li class="nav-item"><a href="blogs.php" class="nav-link text-left" data-page="blogs">Blogs</a></li>
                                 
                                 <?php if (isset($_SESSION['username'])): ?>
                                     <!-- User Dropdown when logged in -->
@@ -69,9 +88,14 @@
                                         </ul>
                                     </li>
                                 <?php else: ?>
-                                <li><a href="register.php" class="nav-link text-left">Register</a></li>
+                                <!-- <li><a href="register.php" class="nav-link text-left">Register</a></li> -->
 
                                     <!-- Login Button when not logged in -->
+                                    <li class="nav-item">
+                                        <a class="nav-link btn btn-primary text-white rounded-pill px-1" href="register.php">
+                                        Register
+                                        </a>
+                                    </li>
                                     <li class="nav-item ms-lg-3">
                                         <a class="nav-link btn btn-primary text-white rounded-pill px-3" href="login.php">
                                             <i class="fas fa-sign-in-alt me-1"></i> Login
@@ -128,5 +152,31 @@
       
       mobileMenuBody.appendChild(mobileNav);
     }
+
+    // Add underline functionality
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Remove active class from all links
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // Add active class to the clicked link
+            this.classList.add('active');
+        });
+    });
+
+    // Set active class based on current page (optional, if needed)
+    const currentPage = window.location.pathname.split('/').pop().replace('.php', '');
+    navLinks.forEach(link => {
+        if (link.dataset.page === currentPage) {
+            link.classList.add('active');
+        }
+    });
   });
 </script>
+</body>
+
+</html>

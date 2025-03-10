@@ -28,48 +28,51 @@
 
    <!-- About Section -->
    <section class="about-section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6" data-aos="fade-right">
-            <div class="about-image">
-              <img src="images/ship_520 (5).jpg" alt="Cruise Ship" class="img-fluid rounded">
-              <div class="experience-badge">
-                <span class="years">30+</span>
-                <span class="text">Years of Experience</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="about-content">
-              <span class="section-subtitle">About Us</span>
-              <h2 class="section-title text-dark">India's Premier Cruise Experience</h2>
-              <p class="about-text">
-                Indigoseaways Pvt. Ltd under the brand name of SGR Sea Connect - A Sea Group Roro Ferry Company is India's first Roll On-Roll Off Ferry Service provider- the unique & fastest Passenger cum Cargo service in partnership with Gujarat Maritime Board in Gulf of Cambay.
-              </p>
-              <p class="about-text">
-                DG Sea Connect is one such dream seen by our Hon. Prime Minister Shri Narendra Modi to bring India's first ROPAX Ferry into existence which connects two crucial points of Gujarat.
-              </p>
-              <div class="about-features">
-                <div class="feature">
-                  <i class="fas fa-ship"></i>
-                  <span>Modern Fleet</span>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-user-tie"></i>
-                  <span>Expert Crew</span>
-                </div>
-                <div class="feature">
-                  <i class="fas fa-star"></i>
-                  <span>5-Star Service</span>
-                </div>
-              </div>
-              <!-- <a href="about.php" class="btn btn-outline-primary">Learn More</a> -->
-            </div>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="about-image">
+          <video class="img-fluid rounded" autoplay loop muted playsinline>
+            <source src="images/about-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="experience-badge">
+            <span class="years">30+</span>
+            <span class="text">Years of Experience</span>
           </div>
         </div>
       </div>
-    </section>
-    <!-- END About Section -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="about-content">
+          <span class="section-subtitle">About Us</span>
+          <h2 class="section-title text-dark">India's Premier Cruise Experience</h2>
+          <p class="about-text">
+            Indigoseaways Pvt. Ltd under the brand name of SGR Sea Connect - A Sea Group Roro Ferry Company is India's first Roll On-Roll Off Ferry Service provider- the unique & fastest Passenger cum Cargo service in partnership with Gujarat Maritime Board in Gulf of Cambay.
+          </p>
+          <p class="about-text">
+            DG Sea Connect is one such dream seen by our Hon. Prime Minister Shri Narendra Modi to bring India's first ROPAX Ferry into existence which connects two crucial points of Gujarat.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <i class="fas fa-ship"></i>
+              <span>Modern Fleet</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-user-tie"></i>
+              <span>Expert Crew</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-star"></i>
+              <span>5-Star Service</span>
+            </div>
+          </div>
+          <!-- <a href="about.php" class="btn btn-outline-primary">Learn More</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- END About Section -->
  <!-- Services Section -->
  <section class="services-section">
       <div class="container">

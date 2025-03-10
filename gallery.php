@@ -1,5 +1,6 @@
 <?php
 // session_start();
+// error_reporting(0);
 // Database Connection
 include('includes/config.php');
 ?>
@@ -8,7 +9,8 @@ include('includes/config.php');
 <html lang="en">
 <?php include "includes/header.php"; ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="css/custom.css">
+<link rel="stylesheet" href="css/custon.css">
+
 
 <style>
     /* Gallery Styling */
@@ -62,8 +64,8 @@ include('includes/config.php');
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
     <div class="site-wrap">
-
         <?php include_once("includes/navbar.php"); ?>
+
 
         <div class="intro-section" style="background-image: url('images/hero_2.jpg');">
             <div class="container">

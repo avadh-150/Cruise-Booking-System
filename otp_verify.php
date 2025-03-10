@@ -6,9 +6,9 @@ require 'includes/config.php'; // Replace with your database connection file
 
 // reCAPTCHA keys
 // $siteKey = 'AASRV3dl6LdNQu4qAAAAA_Yxi4Lmrzxgz5SdC8Awb';
-$siteKey = 'YOUR_SITE_KEY_HERE';
+$siteKey = '6LcpGvAqAAAAAGkGom-HxZGvTKdfrTf15dKBVwDF';
 // $secretKey = '6LdNDMFBFwd3eJxymF6hi8hsOe9tdfpgd';
-$secretKey = 'YOUR_SECRET_KEY_HERE';
+$secretKey = '6LcpGvAqAAAAAB0hR0LRDMlihUbwJ99MqauFOZBN';
 
 $msg = "";
 if(isset($_GET['email']))
